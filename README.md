@@ -63,6 +63,12 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+I opened postman and added a byebug in the controller under create verb
+First I edited the routes.rb to be just 
+'resources :toys'
+rather than 
+'resources :toys, only: [:index, :create, :update]'
+
 
 - Update the number of likes for a toy
 
@@ -71,3 +77,5 @@ developing your own process.
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+
+After updating the route.rb it was easier to first create a show verb to get the toys by Id then we could find them and delete as pecific Item that we donate by getting it by id and rid of the  item in the ui and backend by clicking Donate
